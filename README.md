@@ -21,7 +21,7 @@ And the following target platforms:
 
 ## Installation
 
-Download the latest build from [Releases](https://github.com/novacbn/gmodproj-plugin-builtin/releases). Place file in `{PROJECTHOME}/.gmodproj/plugins` for specific projects. Or place file in `%APPDATA%\.gmodproj\plugins` _(Windows)_ or `~/.gmodproj/plugins` _(Linux)_.
+Download the latest `gmodproj-plugin-builtin.lua` build from [Releases](https://github.com/novacbn/gmodproj-plugin-builtin/releases). Place file in `{PROJECTHOME}/.gmodproj/plugins` for specific projects. Or place file in `%APPDATA%\.gmodproj\plugins` _(Windows)_ or `~/.gmodproj/plugins` _(Linux)_.
 
 # Building
 
