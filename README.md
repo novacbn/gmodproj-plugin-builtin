@@ -38,10 +38,6 @@ gmodproj build # Or gmodproj build production
 ```
 
 ## Configuration
-	basic   = {"comments", "whitespace", "emptylines"},
-	debug   = {"whitespace", "locals", "entropy", "comments", "numbers"},
-	default = {"comments", "whitespace", "emptylines", "numbers", "locals"},
-	full    = {"comments", "whitespace", "emptylines", "eols", "strings", "numbers", "locals", "entropy"}
 The following options and their defaults is supported in your `manifest.gmodproj`:
 ```moonscript
 Project {
