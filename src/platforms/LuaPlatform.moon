@@ -15,7 +15,6 @@ PRODUCTION_MINIFICATION_LEVEL = "full"
 export TEMPLATE_HEADER_PACKAGE = (entryPoint, postChunk) -> "return (function (modules, ...)
     local _G            = _G
     local error         = _G.error
-    local loadstring    = _G.loadstring
     local setfenv       = _G.setfenv
     local setmetatable  = _G.setmetatable
 

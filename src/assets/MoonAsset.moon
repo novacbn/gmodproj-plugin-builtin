@@ -3,7 +3,7 @@ import match, gsub from string
 import format_error, tree from require "moonscript/compile"
 import string from require "moonscript/parse"
 
-import logFatal from gmodproj.require "gmodproj/lib/logging"
+import logFatal from gmodproj.require "novacbn/gmodproj/lib/logging"
 
 import LuaAsset from "novacbn/gmodproj-plugin-builtin/assets/LuaAsset"
 
