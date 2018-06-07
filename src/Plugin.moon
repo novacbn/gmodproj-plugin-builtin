@@ -5,7 +5,9 @@ import PluginOptions from "novacbn/gmodproj-plugin-builtin/PluginOptions"
 import DataFileAsset from "novacbn/gmodproj-plugin-builtin/assets/DataFileAsset"
 import JSONAsset from "novacbn/gmodproj-plugin-builtin/assets/JSONAsset"
 import LuaAsset from "novacbn/gmodproj-plugin-builtin/assets/LuaAsset"
+import LPropAsset from "novacbn/gmodproj-plugin-builtin/assets/LPropAsset"
 import MoonAsset from "novacbn/gmodproj-plugin-builtin/assets/MoonAsset"
+import MPropAsset from "novacbn/gmodproj-plugin-builtin/assets/MPropAsset"
 import TOMLAsset from "novacbn/gmodproj-plugin-builtin/assets/TOMLAsset"
 
 import GarrysmodPlatform from "novacbn/gmodproj-plugin-builtin/platforms/GarrysmodPlatform"
@@ -34,6 +36,8 @@ exports.Plugin = Plugin\extend {
         -- Register the built-in flatfile data support
         resolver\registerAsset("datl", DataFileAsset)
         resolver\registerAsset("json", JSONAsset)
+        resolver\registerAsset("lprop", LPropAsset)
+        resolver\registerAsset("mprop", MPropAsset)
         resolver\registerAsset("toml", TOMLAsset)
 
     -- Plugin::registerTemplates(Application application) -> void

@@ -51,16 +51,14 @@ export PackageTemplate = Template\extend {
         ))
 
         -- Create the project's manifest
-        @writeDataFile("manifest.gmodproj", {
-            Project: {
-                projectName:        @projectName
-                projectAuthor:      @projectAuthor
-                projectVersion:     "0.0.0"
-                projectRepository:  "unknown://unknown"
+        @writeProperties(".gmodmanifest", {
+            name:       @projectName
+            author:     @projectAuthor
+            version:    "0.0.0"
+            repository: "unknown://unknown"
 
-                entryPoints: {
-                    {"#{@projectAuthor}/#{@projectName}/main", "#{@projectAuthor}.#{@projectName}"}
-                }
+            projectBuilds: {
+                "#{@projectAuthor}/#{@projectName}/main": "#{@projectAuthor}.#{@projectName}"
             }
         })
 }

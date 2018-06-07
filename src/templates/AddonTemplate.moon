@@ -19,10 +19,10 @@ export AddonTemplate = Template\extend {
 
         -- Create the Garry's Mod addon manifest
         @writeJSON("addons/#{@projectName}/addon.json", {
-            title:          @projectName,
-            type:           "",
-            tags:           {},
-            description:    "",
+            title:          @projectName
+            type:           ""
+            tags:           {}
+            description:    ""
             ignore:         {}
         })
 
@@ -34,20 +34,18 @@ export AddonTemplate = Template\extend {
         @write("src/server.lua", "imp".."ort('#{moduleHeader}/shared').sharedFunc()\nprint('I was called on the server!')")
         @write("src/shared.lua", "function sharedFunc()\n\tprint('I was called on the client and server!')\nend")
 
-        -- Create the project's manifest
-        @writeDataFile("manifest.gmodproj", {
-            Project: {
-                projectName:        @projectName
-                projectAuthor:      @projectAuthor
-                projectVersion:     "0.0.0"
-                projectRepository:  "unknown://unknown"
+        -- Crepate the project's manifest
+        @writeProperties(".gmodmanifest", {
+            name:       @projectName
+            author:     @projectAuthor
+            version:    "0.0.0"
+            repository: "unknown://unknown"
 
-                buildDirectory: "addons/#{@projectName}/lua"
+            buildDirectory: "addons/#{@projectName}/lua"
 
-                entryPoints: {
-                    {"#{moduleHeader}/client", "autorun/client/#{@projectName}.client"},
-                    {"#{moduleHeader}/server", "autorun/server/#{@projectName}.server"}
-                }
+            projectBuilds: {
+                "#{moduleHeader}/client": "autorun/client/#{@projectName}.client"
+                "#{moduleHeader}/server": "autorun/server/#{@projectName}.server"
             }
         })
 }

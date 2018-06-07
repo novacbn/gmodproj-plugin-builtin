@@ -1,0 +1,15 @@
+name:       "gmodproj-plugin-builtin"
+author:     "novacbn"
+version:    "0.2.0"
+repository: "github://novacbn/gmodproj-plugin-builtin"
+
+projectBuilds:
+    "novacbn/gmodproj-plugin-builtin/Plugin": "gmodproj-plugin-builtin"
+
+Packager:
+    targetPlatform: "lua"
+
+Plugins:
+    -- gmodproj-plugin-builtin is enabled by default, we want full minification on production though
+    "gmodproj-plugin-builtin":
+        minificationLevel: "full"

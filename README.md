@@ -1,6 +1,6 @@
 # gmodproj-plugin-builtin
 
-> **gmodproj >= 0.3.0**
+> **gmodproj >= 0.4.0**
 
 > **WARNING:** This is automatically bundled and enabled with `gmodproj`, you should not have to download it!
 
@@ -11,9 +11,11 @@ This is the bundled plugin that comes with [gmodproj](https://github.com/novacbn
 * `.moon`
 
 For the following data files:
+* `.datl` *(DEPRECATED)*
 * `.json`
+* `.lprop`
+* `.mprop`
 * `.toml`
-* `.datl`
 
 And the following target platforms:
 * `lua`
@@ -38,19 +40,22 @@ gmodproj build # Or gmodproj build production
 ```
 
 ## Configuration
-The following options and their defaults is supported in your `manifest.gmodproj`:
+
+The following options and their defaults is supported in your `.gmodmanifest`:
 ```moonscript
-Project {
-    Plugins {
-        'gmodproj-plugin-builtin': {
-            -- Supports the following minification levels:
-            --  * none - No minification is performed on packages
-            --  * basic - Comments, whitespace, and emptylines are optimized
-            --  * debug - Whitespace, comments, entropy, numbers, and locals are optimized
-            --  * default - Comments, whitespace, emptylines, numbers, and locals are optimized
-            --  * full - Comments, whitespace, emptylines, end of lines, strings, numbers, locals, and entropy are optimized
-            minificationLevel: 'default'
-        }
-    }
-}
+Plugins:
+    'gmodproj-plugin-builtin':
+        -- Supports the following minification levels:
+        --  * none - No minification is performed on packages
+        --  * basic - Comments, whitespace, and emptylines are optimized
+        --  * debug - Whitespace, comments, entropy, numbers, and locals are optimized
+        --  * default - Comments, whitespace, emptylines, numbers, and locals are optimized
+        --  * full - Comments, whitespace, emptylines, end of lines, strings, numbers, locals, and entropy are optimized
+        minificationLevel: 'default'
 ```
+
+## Dependencies/Third-Party
+
+* [jonstoler/lua-toml](https://github.com/jonstoler/lua-toml)
+* [matthewwild](http://matthewwild.co.uk/projects/squish/home)
+* [rxi/json](https://github.com/rxi/json)

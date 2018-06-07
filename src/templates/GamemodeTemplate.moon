@@ -75,19 +75,17 @@ export GamemodeTemplate = Template\extend {
         @write("src/shared.lua", "function sharedFunc()\n\tprint('I was called on the client and server!')\nend")
 
         -- Create the project's manifest
-        @writeDataFile("manifest.gmodproj", {
-            Project: {
-                projectName:        @projectName
-                projectAuthor:      @projectAuthor
-                projectVersion:     "0.0.0"
-                projectRepository:  "unknown://unknown"
+        @writeProperties(".gmodmanifest", {
+            name:       @projectName
+            author:     @projectAuthor
+            version:    "0.0.0"
+            repository: "unknown://unknown"
 
-                buildDirectory: "gamemodes/#{@projectName}/gamemode"
+            buildDirectory: "gamemodes/#{@projectName}/gamemode"
 
-                entryPoints: {
-                    {"#{moduleHeader}/client", "#{@projectName}.client"},
-                    {"#{moduleHeader}/server", "#{@projectName}.server"}
-                }
+            projectBuilds: {
+                "#{moduleHeader}/client": "#{@projectName}.client"
+                "#{moduleHeader}/server": "#{@projectName}.server"
             }
         })
 }
