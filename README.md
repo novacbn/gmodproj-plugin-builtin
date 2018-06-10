@@ -4,9 +4,11 @@
 
 > **WARNING:** This is automatically bundled and enabled with `gmodproj`, you should not have to download it!
 
+> **NOTE:** To get help or request features, use the issue tracker at [novacbn/gmodproj](https://github.com/novacbn/gmodproj)
+
 ## Description
 
-This is the bundled plugin that comes with [gmodproj](https://github.com/novacbn/gmodproj), it adds the support for the following programming languages:
+This is the bundled plugin that comes with [novacbn/gmodproj](https://github.com/novacbn/gmodproj), it adds the support for the following programming languages:
 * `.lua`
 * `.moon`
 
@@ -57,5 +59,5 @@ Plugins:
 ## Dependencies/Third-Party
 
 * [jonstoler/lua-toml](https://github.com/jonstoler/lua-toml)
-* [matthewwild](http://matthewwild.co.uk/projects/squish/home)
+* [matthewwild/minify](http://matthewwild.co.uk/projects/squish/home)
 * [rxi/json](https://github.com/rxi/json)
