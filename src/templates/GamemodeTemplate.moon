@@ -58,12 +58,12 @@ export GamemodeTemplate = Template\extend {
 
         -- Create the Garry's Mod bootloader scripts
         @write("gamemodes/#{@projectName}/gamemode/cl_init.lua", TEMPLATE_PROJECT_BOOTLOADER(
-            nil, {"#{@projectName}.client.lua"}
+            nil, {"#{@projectName}_client.lua"}
         ))
 
         @write("gamemodes/#{@projectName}/gamemode/init.lua", TEMPLATE_PROJECT_BOOTLOADER(
-            {"cl_init.lua", "#{@projectName}.client.lua"},
-            {"#{@projectName}.server.lua"}
+            {"cl_init.lua", "#{@projectName}_client.lua"},
+            {"#{@projectName}_server.lua"}
         ))
 
         -- Format a header prefix for brevity
