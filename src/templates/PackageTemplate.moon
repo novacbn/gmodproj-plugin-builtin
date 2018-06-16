@@ -58,7 +58,7 @@ export PackageTemplate = Template\extend {
             repository: "unknown://unknown"
 
             projectBuilds: {
-                "#{@projectAuthor}/#{@projectName}/main": "#{@projectAuthor}.#{@projectName}"
+                "#{@projectAuthor}/#{@projectName}/main": "#{@projectAuthor}_#{@projectName}"
             }
         })
 }

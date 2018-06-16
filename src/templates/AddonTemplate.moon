@@ -29,7 +29,8 @@ export AddonTemplate = Template\extend {
         -- Format a header prefix for brevity
         moduleHeader = @projectAuthor.."/"..@projectName
 
-        -- Create the project's entry points HACK: gmodproj currently doesn't do lexical lookup of import/dependency statements...
+        -- Create the project's entry points
+        -- HACK: gmodproj currently doesn't do lexical lookup of import/dependency statements...
         @write("src/client.lua", "imp".."ort('#{moduleHeader}/shared').sharedFunc()\nprint('I was called on the client!')")
         @write("src/server.lua", "imp".."ort('#{moduleHeader}/shared').sharedFunc()\nprint('I was called on the server!')")
         @write("src/shared.lua", "function sharedFunc()\n\tprint('I was called on the client and server!')\nend")
@@ -44,8 +45,8 @@ export AddonTemplate = Template\extend {
             buildDirectory: "addons/#{@projectName}/lua"
 
             projectBuilds: {
-                "#{moduleHeader}/client": "autorun/client/#{@projectName}.client"
-                "#{moduleHeader}/server": "autorun/server/#{@projectName}.server"
+                "#{moduleHeader}/client": "autorun/client/#{@projectName}_client"
+                "#{moduleHeader}/server": "autorun/server/#{@projectName}_server"
             }
         })
 }

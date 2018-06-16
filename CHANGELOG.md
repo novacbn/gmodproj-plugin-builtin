@@ -1,5 +1,8 @@
 # gmodproj-plugin-builtin changelog
 
+## 0.2.1
+* Fixed Linux/macOS support [novacbn/gmodproj #14](https://github.com/novacbn/gmodproj/issues/14)
+
 ## 0.2.0
 * Added two new data format extensions, `.lprop`, `.mprop`.
     * See [novacbn/properties](https://github.com/novacbn/properties) for `.lprop` and `.mprop` format details

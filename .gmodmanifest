@@ -1,6 +1,6 @@
 name:       "gmodproj-plugin-builtin"
 author:     "novacbn"
-version:    "0.2.0"
+version:    "0.2.1"
 repository: "github://novacbn/gmodproj-plugin-builtin"
 
 projectBuilds:
